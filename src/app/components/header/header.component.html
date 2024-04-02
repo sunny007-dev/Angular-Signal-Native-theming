@@ -1,0 +1,22 @@
+<div class="header">
+    <button><span class="material-symbols-outlined">
+      menu
+      </span></button>
+      @if(themeService.themeSignal() === "dark") {
+        <p>Dark Mode Active</p>
+      } @else {
+          <p>Light Mode Active</p>
+      }
+      <div class="theme-control">
+        @if (themeService.themeSignal() === 'dark') {
+            <button (click)="toggleTheme()"><span class="material-symbols-outlined">
+                wb_sunny
+                </span></button>
+    
+        } @else {
+            <button (click)="toggleTheme()"><span class="material-symbols-outlined">
+                dark_mode
+                </span></button>    
+        }
+      </div>
+  </div>
